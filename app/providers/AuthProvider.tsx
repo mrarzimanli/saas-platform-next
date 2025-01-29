@@ -25,6 +25,7 @@ interface IAuthProvider {
   handleUpgradePlan: () => void;
   handleLogout: () => void;
   resetAuthContext: () => void;
+  refetchUser: () => void;
 }
 
 const defaultAlertData: IAlertData = {
@@ -48,10 +49,14 @@ export const AuthProvider = ({ children }: { children: ReactNode }): JSX.Element
   const [alertData, setAlertData] = useState<IAlertData>(defaultAlertData);
 
   const { mutate: mutateLogout, isLoading: isLogoutLoading } = useLogout();
-  const { data: user, isLoading: isUserLoading } = useMe();
+  const { data: user, isLoading: isUserLoading, refetch: refetchMe } = useMe();
 
   const resetAuthContext = () => {
     setAuth(null);
+  };
+
+  const refetchUser = () => {
+    refetchMe();
   };
 
   const handleUpgradePlan = () => {
@@ -93,12 +98,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }): JSX.Element
     }
   }, [user, isUserLoading]);
 
-  if (isUserLoading) {
-    // return <Loading />;
-  }
-
   return (
-    <AuthContext.Provider value={{ auth, setAuth, handleUpgradePlan, handleLogout, resetAuthContext }}>
+    <AuthContext.Provider value={{ auth, setAuth, handleUpgradePlan, handleLogout, resetAuthContext, refetchUser }}>
       {children}
 
       <Modal

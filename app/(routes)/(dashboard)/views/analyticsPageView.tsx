@@ -8,10 +8,11 @@ import { Performance, Post, Reels } from "../shared/types";
 import { useAnalytics } from "../api/analytics/queries";
 import Skeleton from "react-loading-skeleton";
 import { useTranslations } from "next-intl";
+import { useEffect } from "react";
 
 export default function AnalyticsPageView() {
   const tWidgets = useTranslations("widgets");
-  const { auth } = useAuth();
+  const { auth, handleUpgradePlan } = useAuth();
 
   const { data: plan, isLoading: isPlanLoading } = usePlanById(auth?.user?.subscription?.planId);
 
@@ -27,6 +28,12 @@ export default function AnalyticsPageView() {
   const audienceByAge = results?.[4]?.data?.data;
   const audienceByCountries = results?.[5]?.data?.data;
   const audienceByCities = results?.[6]?.data?.data;
+
+  useEffect(() => {
+    if (auth?.user?.subscription?.status === "canceled") {
+      handleUpgradePlan();
+    }
+  }, [plan]);
 
   return (
     <div className={styles.page}>

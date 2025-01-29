@@ -112,7 +112,7 @@ export default function DashboardPageView() {
             <div className={styles.widget}>
               <div className={styles.widget__header}>
                 <div className={styles.widget__header__content}>
-                  <span className={styles.widget__header__title}>{tWidgets("topCountries.title")}</span>
+                  <span className={styles.widget__header__title}>{tWidgets("audienceByAge.title")}</span>
                 </div>
                 <div className={styles.widget__header__actions}>
                   <Button

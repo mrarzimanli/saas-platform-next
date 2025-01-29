@@ -21,12 +21,10 @@ export default function SettingsPageView() {
   const tModals = useTranslations("modals");
   const tSettings = useTranslations("settings");
 
-  const router = useRouter();
-  const { auth } = useAuth();
+  const { auth, refetchUser } = useAuth();
 
   const [showAlertModal, setShowAlertModal] = useState(false);
   const [alertData, setAlertData] = useState<IAlertData>(defaultAlertData);
-  const [showPassword, setShowPassword] = useState(false);
   const [showCancelSubscription, setShowCancelSubscription] = useState(false);
 
   const { mutate: mutateCancelSubscription, isLoading: isCancelSubscriptionLoading } = useCancelSubscription();
@@ -45,7 +43,10 @@ export default function SettingsPageView() {
       },
       {
         onSuccess: async () => {
-          router.push(AppRoutes.LOGIN);
+          refetchUser();
+          setShowCancelSubscription(false);
+          setAlertData({ type: "success", icon: <TriangleIconFilled />, title: tModals("successfulOperation.title"), description: tModals("successfulOperation.description") });
+          setShowAlertModal(true);
         },
         onError: () => {
           setAlertData({ type: "danger", icon: <TriangleIconFilled />, title: tModals("unexpectedError.title"), description: tModals("unexpectedError.description") });

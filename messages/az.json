@@ -134,6 +134,10 @@
     "logout": {
       "title": "Diqqət!",
       "description": "Çıxmaq istədiyinizdən əminsinizmi?"
+    },
+    "successfulOperation": {
+      "title": "Uğurlu əməliyat!",
+      "description": ""
     }
   },
 

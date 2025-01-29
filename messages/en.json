@@ -134,6 +134,10 @@
     "logout": {
       "title": "Attention!",
       "description": "Are you sure you want to log out?"
+    },
+    "successfulOperation": {
+      "title": "Successful Operation!",
+      "description": ""
     }
   },
 
