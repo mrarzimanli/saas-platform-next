@@ -12,5 +12,26 @@
     "username": "Fada Arzimanli",
     "password": "$2b$10$iQj.9q8RCFmKeD3Zv7pTb.cSYDQKFgdxPvTFcb9K041OHM/.dHN5C",
     "plan": "basic"
+  },
+  {
+    "id": "3",
+    "email": "test.basic@example.com",
+    "username": "Test User Basic",
+    "password": "$2b$10$P8MX2WthevnkZqLBMh87MuRHZLKFeSps/FKQZ4OQsPh9Uk2ojEoqW",
+    "plan": "basic"
+  },
+  {
+    "id": "4",
+    "email": "test.pro@example.com",
+    "username": "Test User Pro",
+    "password": "$2b$10$DXF6VZqo3sdx0/CFv/9i6umNo1jx4aw60kpC0eAL//UPriENiSQ9m",
+    "plan": "pro"
+  },
+  {
+    "id": "5",
+    "email": "test.enterprise@example.com",
+    "username": "Test User Enterprise",
+    "password": "$2b$10$0h.cnDjUI24eyRm0LsZR8.VN4Ams.M.QmijrxdKjZ.5mpxkRhKxZW",
+    "plan": "enterprise"
   }
 ]

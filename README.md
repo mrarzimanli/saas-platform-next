@@ -1,8 +1,10 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Proyekti işə salmaq üçün:
 
-## Getting Started
+Nümunə kimi əlavə olunmuş `env-example` faylını `.env` olaraq dəyişərək aşağıdakı əmrləri ardıcıllıqla icra edin.
 
-First, run the development server:
+```bash
+npm install
+```
 
 ```bash
 npm run dev
@@ -14,23 +16,83 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Nəticəni görmək üçün brauzerdə [http://localhost:3000](http://localhost:3000) açın.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Hər plan üçün test istifadəçi
+**Qeyd:** yeni istifadəçi yaradaraq da daxil ola bilərsiniz.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| **Plan**       | **E-mail**                    | **Password** |
+| -------------- | ----------------------------- | ------------ |
+| **Basic**      | `test.basic@example.com`      | `Test123`    |
+| **Pro**        | `test.pro@example.com`        | `Test123`    |
+| **Enterprise** | `test.enterprise@example.com` | `Test123`    |
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## İstifadə olunan texnologiyalar:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Proyekt arxitekturası `Union Design Pattern` əsasında hazırlanıb və modulyarlıq maksimum qorunmağa çalışılıb.
 
-## Deploy on Vercel
+- Ehtiyac olan API-ləri təmin edə bilmək üçün `next.js` istifadə edilib və hər hansı 3-cü tərəf provider istifadə etmədən bütün API-lər manual olaraq yazılıb.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `JWT` istifadə edərək **Secure Authentication** təmin edildi. (`authToken`, `refreshToken`)
+- **Global state management** üçün `ContextAPI`, **data fetching** üçün `react-query`, **API client** olaraq `axios` istifadə edildi.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Routing dəyişikliyi olmadab **internationalization** üçün `next-intl (i18n)` istifadə edildi. (`en`, `az`)
+
+- `middleware` vasitəsi ilə **Protected Routing** və **Plan-Based Access Control** təmin edilib.
+
+- **Code efficiency** artırmaq üçün `TypeScript` istifadə olunub.
+
+- Dizayn bacarıqlarını önə çıxarmaq üçün hər hansı Design System və ya kitabxanası istifadə olunmayıb. Dizayn `BEM` metodologiyası və `Module SCSS` istifadə edilərək sıfırdan hazırlanıb.
+- Analitika məlumatlarının göstərilməsi üçün `Apache eCharts` istifadə olunub.
+
+- **Data Fetching** zamanı axıcı görüntünün əldə olunması üçün `React Loading Skeleton` istifadə olunub.
+
+-  `SVGr` vasitəsi ilə vizuallarlın komponent kimi render olunması təmin olunub.
+
+- Baş verə biləcək UI xətalarınını, mövcud olmayan səhifələrə müraciətləri önləmək üçün global `not-found`, `errors`, `loading` səhifələri əlavə edilib.
+
+- `React Testing Library` və `Jest` istifadə olunaraq bir neçə test nümunəsi yazılııb.
+
+## API Structure
+
+| **Category**  | **Endpoint**                     | **Description**              |
+| ------------- | -------------------------------- | ---------------------------- |
+| **Analytics** | `analytics/audienceByAge/`       | Audience data by age         |
+|               | `analytics/audienceByCities/`    | Audience data by cities      |
+|               | `analytics/audienceByCountries/` | Audience data by countries   |
+|               | `analytics/audienceByGender/`    | Audience data by gender      |
+|               | `analytics/performances/`        | Content performance data     |
+|               | `analytics/posts/`               | Posts analytics              |
+|               | `analytics/reels/`               | Reels analytics              |
+| **Auth**      | `auth/login/`                    | User login                   |
+|               | `auth/logout/`                   | User logout                  |
+|               | `auth/me/`                       | Get current user info        |
+|               | `auth/refresh-token/`            | Refresh authentication token |
+|               | `auth/register/`                 | User registration            |
+| **Plans**     | `plans/[id]/`                    | Plan details                 |
+|               | `plans/[id]/cancel/`             | Cancel a specific plan       |
+|               | `plans/list/`                    | List all plans               |
+|               | `plans/subscribe/`               | Subscribe to a plan          |
+
+
+## Plan Features
+
+| **Plan**       | **Features**                                                                                               |
+| -------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Basic**      | Performances, Audience by Gender, Audience by Age, Posts                                                   |
+| **Pro**        | Performances, Audience by Gender, Audience by Age, Posts, Reels                                            |
+| **Enterprise** | Performances, Audience by Gender, Audience by Age, Audience by Countries, Audience by Cities, Posts, Reels |
+
+
+## Pages List
+
+## Auth Pages
+- `auth/login`
+- `auth/signup`
+
+## Dashboard Pages
+- `dashboard/analytics` (show only for pro and enterprise users)
+- `dashboard/dashboard`
+- `dashboard/settings`

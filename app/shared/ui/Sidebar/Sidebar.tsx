@@ -58,7 +58,7 @@ const Sidebar = () => {
         />
       ),
       ...(user?.subscription?.planId !== Plans.BASIC ? { href: AppRoutes.ANALYTICS } : { onClick: handleUpgradePlan }),
-      badge: "Pro",
+      ...(user?.subscription?.planId === Plans.BASIC && { badge: "Pro" }),
     },
     {
       id: "2",

@@ -8,5 +8,20 @@
     "userId": "2",
     "planId": "basic",
     "status": "active"
+  },
+  {
+    "userId": "3",
+    "planId": "basic",
+    "status": "active"
+  },
+  {
+    "userId": "4",
+    "planId": "pro",
+    "status": "active"
+  },
+  {
+    "userId": "5",
+    "planId": "enterprise",
+    "status": "active"
   }
 ]
