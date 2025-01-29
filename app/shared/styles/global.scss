@@ -1,0 +1,288 @@
+/* Reset Styles */
+
+/* 1. Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/*
+    3. Add accessible line-height
+    4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Globals */
+:root {
+  /* Design color */
+  --blue-50: #f2f4fc;
+  --blue-100: #d6def5;
+  --blue-200: #c3cef1;
+  --blue-300: #a7b7ea;
+  --blue-400: #96a9e6;
+  --blue-500: #7c94e0;
+  --blue-600: #7187cc;
+  --blue-700: #58699f;
+  --blue-800: #44517b;
+  --blue-900: #343e5e;
+
+  /* Base colors */
+  --base-1: #ffffff;
+  --base-2: #fdfdfd;
+  --base-3: #f6f6f8;
+  --base-4: #f1f2f4;
+  --base-5: #dbdde4;
+  --base-6: #c4c7d2;
+  --base-7: #949aae;
+  --base-8: #656d89;
+  --base-9: #525b7b;
+  --base-10: #364165;
+  --base-11: #2e3a60;
+  --base-12: #253158;
+  --base-13: #121f4a;
+
+  /* Semantic colors */
+  --black-1: #ffffff;
+  --black-2: #fcfcfc;
+  --black-3: #f5f5f5;
+  --black-4: #f0f0f0;
+  --black-5: #d9d9d9;
+  --black-6: #bfbfbf;
+  --black-7: #8c8c8c;
+  --black-8: #595959;
+  --black-9: #454545;
+  --black-10: #262626;
+  --black-11: #1f1f1f;
+  --black-12: #141414;
+  --black-13: #000000;
+
+  --sky-blue-50: #f2f8fc;
+  --sky-blue-100: #d6eaf5;
+  --sky-blue-200: #c3e0f1;
+  --sky-blue-300: #a7d2ea;
+  --sky-blue-400: #96c9e6;
+  --sky-blue-500: #7cbce0;
+  --sky-blue-600: #71abcc;
+  --sky-blue-700: #58859f;
+  --sky-blue-800: #44677b;
+  --sky-blue-900: #344f5e;
+
+  --yellow-50: #fcfbf2;
+  --yellow-100: #f5f2d6;
+  --yellow-200: #f1ecc3;
+  --yellow-300: #eae4a7;
+  --yellow-400: #e6de96;
+  --yellow-500: #e0d67c;
+  --yellow-600: #ccc371;
+  --yellow-700: #9f9858;
+  --yellow-800: #7b7644;
+  --yellow-900: #5e5a34;
+
+  --green-50: #f2fcf5;
+  --green-100: #d6f5e1;
+  --green-200: #c3f1d2;
+  --green-300: #c3f1d2;
+  --green-400: #96e6b1;
+  --green-500: #7ce09e;
+  --green-600: #71cc90;
+  --green-700: #589f70;
+  --green-800: #447b57;
+  --green-900: #345e42;
+
+  --pink-50: #fcf2fa;
+  --pink-100: #f5d6ef;
+  --pink-200: #f1c3e7;
+  --pink-300: #eaa7db;
+  --pink-400: #e696d5;
+  --pink-500: #e07cca;
+  --pink-600: #cc71b8;
+  --pink-700: #9f588f;
+  --pink-800: #7b446f;
+  --pink-900: #5e3455;
+
+  --red-50: #fcf2f2;
+  --red-100: #f5d6d6;
+  --red-200: #f1c3c3;
+  --red-300: #eaa7a7;
+  --red-400: #e69696;
+  --red-500: #e07c7c;
+  --red-600: #cc7171;
+  --red-700: #9f5858;
+  --red-800: #7b4444;
+  --red-900: #5e3434;
+
+  --orange-50: #fef7ea;
+  --orange-100: #fce5bd;
+  --orange-200: #fad89d;
+  --orange-300: #f8c670;
+  --orange-400: #f6bb55;
+  --orange-500: #f4aa2a;
+  --orange-600: #de9b26;
+  --orange-700: #ad791e;
+  --orange-800: #865e17;
+  --orange-900: #664712;
+
+  /* Font size - Headings */
+  --fs-h1: 96px;
+  --fs-h2: 60px;
+  --fs-h3: 48px;
+  --fs-h4: 34px;
+  --fs-h5: 24px;
+  --fs-h6: 20px;
+
+  /* Line height - Headings */
+  --lh-h1: 100px;
+  --lh-h2: 64px;
+  --lh-h3: 56px;
+  --lh-h4: 40px;
+  --lh-h5: 32px;
+  --lh-h6: 24px;
+
+  /* Font size - Sub titles */
+  --fs-sub-title-1: 16px;
+  --fs-sub-title-2: 14px;
+
+  /* Line height - Sub titles */
+  --lh-sub-title-1: 20px;
+  --lh-sub-title-2: 16px;
+
+  /* Font size - Basic */
+  --fs-b1: 16px;
+  --fs-b2: 14px;
+  --fs-b3: 14px;
+  --fs-b4: 12px;
+  --fs-b5: 10px;
+  --fs-b6: 8px;
+
+  /* Line height - Basic */
+  --lh-b1: 24px;
+  --lh-b2: 20px;
+  --lh-b3: 24px;
+  --lh-b4: 16px;
+  --lh-b5: 12px;
+  --lh-b6: 12px;
+
+  /* Font weight */
+  --fw-extra-bold: 900;
+  --fw-bold: 700;
+  --fw-semi-bold: 600;
+  --fw-medium: 500;
+  --fw-regular: 400;
+  --fw-thin: 300;
+}
+
+html,
+body {
+  font-family: var(--font-inter);
+  font-size: var(--fs-b2);
+  font-weight: var(--fw-regular);
+  letter-spacing: 0.4px;
+  line-height: normal;
+  color: var(--black-13);
+  background: var(--black-1);
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+}
+
+.container {
+  width: 100%;
+  max-width: 1248px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* Styling the scrollbar in Firefox  */
+.nice-scroll {
+  scrollbar-color: red green;
+  scrollbar-width: thin;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue-600);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black-1);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.languageSwitcher {
+  position: fixed;
+  right: 94px;
+  top: 40px;
+}

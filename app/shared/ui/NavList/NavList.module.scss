@@ -1,0 +1,109 @@
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__item {
+    $item: &;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px 8px 8px;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 12px;
+    color: var(--base-13);
+    text-align: left;
+    letter-spacing: 0;
+    border: 1px solid transparent;
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+
+    &__icon {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      img,
+      svg {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      gap: 4px;
+    }
+
+    &__title {
+      font-size: var(--fs-b2);
+      line-height: var(--lh-b2);
+      font-weight: var(--fw-bold);
+      color: var(--base-13);
+    }
+
+    &__desc {
+      font-size: var(--fs-b4);
+      line-height: var(--lh-b4);
+      color: var(--base-8);
+    }
+
+    &__arrow {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      flex-shrink: 0;
+
+      path {
+        stroke: var(--base-7);
+        transition: all 250ms ease-in-out;
+      }
+    }
+
+    &__badge {
+      position: absolute;
+      right: 42px;
+      top: 50%;
+      padding: 4px 8px;
+      border-radius: 12px;
+      background-color: var(--orange-500);
+      font-size: var(--fs-b5);
+      line-height: 1;
+      font-weight: var(--fw-bold);
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      background: var(--base-1);
+
+      #{$item}__arrow path {
+        stroke: var(--base-13);
+      }
+    }
+
+    &:focus:not(.active) {
+      border-color: var(--blue-500);
+      background: var(--base-1);
+    }
+
+    &.active {
+      background: var(--base-1);
+
+      #{$item}__arrow path {
+        stroke: var(--base-13);
+      }
+    }
+
+    &.disabled {
+      opacity: 0.75;
+      pointer-events: none;
+    }
+  }
+}

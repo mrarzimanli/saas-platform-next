@@ -1,0 +1,20 @@
+[
+  {
+    "id": "basic",
+    "name": "Basic",
+    "price": 10,
+    "features": ["performances", "audienceByGender", "audienceByAge", "posts"]
+  },
+  {
+    "id": "pro",
+    "name": "Pro",
+    "price": 20,
+    "features": ["performances", "audienceByGender", "audienceByAge", "posts", "reels"]
+  },
+  {
+    "id": "enterprise",
+    "name": "Enterprise",
+    "price": 50,
+    "features": ["performances", "audienceByGender", "audienceByAge", "audienceByCountries", "audienceByCities", "posts", "reels"]
+  }
+]

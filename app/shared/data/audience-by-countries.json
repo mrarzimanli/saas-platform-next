@@ -1,0 +1,22 @@
+[
+  {
+    "legend": {},
+    "tooltip": {},
+    "xAxis": {
+      "type": "value"
+    },
+    "yAxis": {
+      "type": "category",
+      "data": ["Nigeria", "Portugal", "South Africa", "Bangladesh", "Indonesia", "Turkey", "Pakistan", "United States", "India", "Azerbaijan"]
+    },
+    "series": [
+      {
+        "data": [40, 14, 24, 55, 15, 63, 12, 19, 26, 54],
+        "type": "bar",
+        "itemStyle": {
+          "color": "#73c0de"
+        }
+      }
+    ]
+  }
+]

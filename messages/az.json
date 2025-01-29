@@ -1,0 +1,191 @@
+{
+  "errors": {
+    "404": {
+      "title": "404",
+      "description": "Təəssüf ki, axtardığınız səhifə tapılmadı!"
+    },
+    "ui": {
+      "title": "Ooops!",
+      "description": "Xəta baş verdi. Zəhmət olmasa, səhifəni yeniləyin."
+    }
+  },
+
+  "buttons": {
+    "login": "Daxil ol",
+    "signUp": "Qeydiyyatdan keç",
+    "logout": "Çıxış",
+    "clickToLogout": "Çıxış etmət üçün klikləyin",
+    "goBack": "Geri qayıt",
+    "goToDashboard": "Ana səhifəyə qayıt",
+    "okay": "Oldu",
+    "close": "Bağla",
+    "yes": "Bəli",
+    "no": "Xeyr",
+    "upgrade": "Yüksəlt",
+    "cancel": "Ləğv et",
+    "seeMore": "Daha çox göstər"
+  },
+
+  "menu": {
+    "dashboard": {
+      "title": "Ana səhifə",
+      "desc": "Lorem ipsum"
+    },
+    "analytics": {
+      "title": "Analitika",
+      "desc": "Lorem ipsum"
+    },
+    "settings": {
+      "title": "Tənzimləmələr",
+      "desc": "Lorem ipsum"
+    }
+  },
+
+  "login": {
+    "form": {
+      "title": "Giriş",
+      "desc": "Daxil olmaq üçün e-poçt ünvanınızı və şifrənizi daxil edin."
+    }
+  },
+
+  "signUp": {
+    "form": {
+      "title": "Qeydiyyat",
+      "desc": "Qeydiyyatdan keçmək üçün aşağıdakı xanaları doldurun."
+    }
+  },
+
+  "inputs": {
+    "email": {
+      "label": "E-mail",
+      "placeholder": "example@company.com",
+      "error": "Bu xana boş ola bilməz!"
+    },
+    "username": {
+      "label": "İstifadəçi adı",
+      "placeholder": "Daxil edin",
+      "error": "Bu xana boş ola bilməz!"
+    },
+    "password": {
+      "label": "Şifrə",
+      "placeholder": "Şifrənizi daxil edin",
+      "error": "Bu xana boş ola bilməz!",
+      "matchError": "Şifrə uyğun deyil!"
+    },
+    "passwordConfirm": {
+      "label": "Təkrar şifrə",
+      "placeholder": "Təkrar şifrənizi daxil edin",
+      "error": "Bu xana boş ola bilməz!",
+      "matchError": "Şifrə uyğun deyil!"
+    },
+    "plan": {
+      "label": "Plan",
+      "placeholder": "Planı seçin",
+      "error": "Bu xana boş ola bilməz!"
+    },
+    "timezone": {
+      "label": "Timezone",
+      "placeholder": "Timezone seçin",
+      "error": "Bu xana boş ola bilməz!"
+    },
+    "timeFormat": {
+      "label": "Time Format",
+      "placeholder": "Time format seçin",
+      "error": "Bu xana boş ola bilməz!"
+    },
+    "firstDayOfWeek": {
+      "label": "First day of week",
+      "placeholder": "First day of week seçin",
+      "error": "Bu xana boş ola bilməz!"
+    }
+  },
+
+  "emptyStates": {},
+
+  "modals": {
+    "createUser": {
+      "title": "Yeni istifadəçi yarat.",
+      "description": "Aşağıdakı məlumatları dolduraraq yeni istifadəçi yarada bilərsiniz."
+    },
+    "userNotFound": {
+      "title": "Xəta baş verdi!",
+      "description": "İstifadəçi tapılmadı."
+    },
+    "unexpectedError": {
+      "title": "Xəta baş verdi!",
+      "description": "Zəhmət olmasa, yenidən yoxlayın."
+    },
+    "badRequest": {
+      "title": "Bad Request!",
+      "description": "Missing or invalid inputs. Please check your form."
+    },
+    "unauthorized": {
+      "title": "Unauthorized!",
+      "description": "Invalid inputs. Please try again."
+    },
+    "upgradePlan": {
+      "title": "Diqqət!",
+      "description": "Zəhmət olmasa, planınızı yüksəldin."
+    },
+    "cancelPlan": {
+      "title": "Diqqət!",
+      "description": "Planınızı ləğv etmək istədiyinizdən əminsinizmi?"
+    },
+    "logout": {
+      "title": "Diqqət!",
+      "description": "Çıxmaq istədiyinizdən əminsinizmi?"
+    }
+  },
+
+  "dashboard": {
+    "title": "Welcome to SaaS Platform"
+  },
+
+  "settings": {
+    "accountInfo": {
+      "title": "Hesab məlumatı",
+      "description": "Hesab məlumatlarınızı burada yeniləyin"
+    },
+    "billingInfo": {
+      "title": "Faktura təfərrüatları",
+      "description": "Cari planınız, Növbəti faktura məbləği, Növbəti hesablaşma tarixi, Ödəniş metodu"
+    }
+  },
+
+  "routes": {
+    "DASHBOARD": "Ana səhifə",
+    "ANALYTICS": "Analitika",
+    "SETTINGS": "Tənzimləmələr"
+  },
+
+  "widgets": {
+    "pagePerformance": {
+      "title": "Səhifə performansı",
+      "description": "Göstərilən vaxtda səhifənizin necə fəaliyyət göstərdiyinə baxın"
+    },
+    "audienceByGender": {
+      "title": "Cinslərə görə auditoriya",
+      "description": ""
+    },
+    "audienceByAge": {
+      "title": "Yaşa görə auditoriya",
+      "description": ""
+    },
+    "posts": {
+      "title": "Postlar",
+      "description": "Postlarınızın son 6 ayda (2 il) necə performans göstərdiyinə baxın."
+    },
+    "reels": {
+      "title": "Reels",
+      "description": "Reelslərinizi son 6 ayda (2 il) necə performans göstərdiyinə baxın."
+    },
+    "topCountries": {
+      "title": "Top ölkələr",
+      "description": ""
+    },
+    "topCities": {
+      "title": "Top şəhərlər",
+      "description": ""
+    }
+  }
+}

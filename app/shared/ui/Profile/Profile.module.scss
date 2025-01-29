@@ -1,0 +1,135 @@
+.profile {
+  $profile: &;
+  position: relative;
+  align-self: flex-start;
+
+  &__body {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    top: 100%;
+    right: 0;
+    width: 340px;
+    margin-top: 24px;
+    background: var(--base-1);
+    border-radius: 16px;
+    padding: 16px 8px;
+    box-shadow: 0px 14px 65px -24px rgba(92, 84, 187, 0.2);
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 200ms ease-in-out;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &__item {
+      display: flex;
+      padding: 8px 12px;
+      gap: 8px;
+      color: var(--base-13);
+      font-size: var(--fs-b2);
+      font-weight: var(--fw-medium);
+      line-height: var(--lh-b2);
+      transition: all 250ms ease-in-out;
+      border-radius: 6px;
+      cursor: pointer;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        flex-shrink: 0;
+
+        path {
+          stroke: var(--blue-600);
+        }
+      }
+
+      &:hover {
+        background: var(--blue-50);
+      }
+
+      &.logout {
+        cursor: pointer;
+
+        svg {
+          path {
+            stroke: var(--red-500);
+          }
+        }
+
+        &:hover {
+          background: var(--red-50);
+        }
+      }
+    }
+  }
+
+  &.active {
+    #{$profile} {
+      &__body {
+        opacity: 1;
+        visibility: visible;
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 8px;
+
+    &__picture {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 56px;
+      height: 56px;
+      background: var(--blue-50);
+      color: var(--base-13);
+      font-size: var(--fs-b1);
+      font-weight: var(--fw-bold);
+      line-height: var(--lh-b1);
+      letter-spacing: 1px;
+
+      > img,
+      svg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2px;
+    }
+
+    &__name {
+      color: var(--base-13);
+      font-size: var(--fs-b1);
+      font-weight: var(--fw-bold);
+      line-height: var(--lh-b1);
+    }
+
+    &__email {
+      color: var(--base-8);
+      font-size: var(--fs-b2);
+      font-weight: var(--fw-medium);
+      line-height: var(--lh-b2);
+    }
+  }
+}

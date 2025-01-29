@@ -1,0 +1,18 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 338px;
+  padding: 24px;
+  flex-shrink: 0;
+  background: var(--blue-100);
+  border-radius: 32px;
+  overflow: hidden;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: auto;
+  }
+}

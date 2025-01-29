@@ -1,0 +1,25 @@
+.notFound {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &__status {
+    font-size: var(--fs-h1);
+    line-height: var(--lh-h1);
+    font-weight: var(--fw-extra-bold);
+    color: var(--base-13);
+    margin-bottom: 12px;
+  }
+
+  &__message {
+    font-size: var(--fs-b1);
+    line-height: var(--lh-b1);
+    font-weight: var(--fw-medium);
+    color: var(--base-8);
+    margin-bottom: 24px;
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "legend": {},
+    "tooltip": {},
+    "xAxis": {
+      "type": "value"
+    },
+    "yAxis": {
+      "type": "category",
+      "data": ["Noida", "Dhaka", "Cape Town", "Antananarivo", "Chennai", "Riyadh", "Istanbul", "Lagos", "Faisalabad", "Baku"]
+    },
+    "series": [
+      {
+        "data": [2, 20, 14, 5, 3, 31, 22, 4, 9, 51],
+        "type": "bar",
+        "itemStyle": {
+          "color": "#de73d0"
+        }
+      }
+    ]
+  }
+]

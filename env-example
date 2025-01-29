@@ -1,0 +1,5 @@
+# please rename the file to the ".env"
+
+ACCESS_SECRET_KEY=example_access_secret_key
+REFRESH_SECRET_KEY=example_refresh_secret_key
+NEXT_PUBLIC_BASE_URL="http://localhost:3000"

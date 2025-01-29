@@ -1,0 +1,280 @@
+.modal {
+  $modal: &;
+  position: fixed;
+  inset: 0;
+  outline: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  animation: modalFadeAnimation 150ms ease-out;
+
+  &.center {
+    text-align: center;
+
+    #{$modal}__header,
+    #{$modal}__body {
+      align-items: center;
+    }
+  }
+
+  &__dialog {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: calc(100vh - 3rem);
+    margin: 1.5rem auto;
+    pointer-events: none;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 100%;
+    background-color: var(--black-1);
+    border-radius: 24px;
+    background-clip: padding-box;
+    pointer-events: auto;
+    outline: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 32px 20px 32px;
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      margin-bottom: 32px;
+
+      svg,
+      img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+      }
+    }
+
+    &__title {
+      color: var(--black-13);
+      font-size: var(--fs-h6);
+      font-weight: var(--fw-bold);
+      line-height: var(--lh-h6);
+    }
+
+    &__desc {
+      color: var(--black-8);
+      font-size: var(--fs-b3);
+      line-height: var(--lh-b3);
+      margin-top: 16px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 32px;
+    overflow: auto;
+    color: var(--black-13);
+    font-size: var(--fs-b1);
+    line-height: var(--lh-b1);
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 32px 32px 32px;
+
+    &__buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      > * {
+        flex: 1;
+      }
+    }
+  }
+
+  &__close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+  }
+
+  &__loader {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    font-size: var(--fs-b1);
+    line-height: var(--lh-b1);
+    font-weight: var(--fw-bold);
+    backdrop-filter: blur(5px);
+  }
+
+  // modal sizes
+  &.xs {
+    #{$modal} {
+      &__dialog {
+        max-width: 300px;
+      }
+    }
+  }
+
+  &.sm {
+    #{$modal} {
+      &__dialog {
+        max-width: 400px;
+      }
+    }
+  }
+
+  &.md {
+    #{$modal} {
+      &__dialog {
+        max-width: 600px;
+      }
+    }
+  }
+
+  &.lg {
+    #{$modal} {
+      &__dialog {
+        max-width: 940px;
+      }
+    }
+  }
+
+  &.xl {
+    #{$modal} {
+      &__dialog {
+        max-width: 1200px;
+      }
+    }
+  }
+
+  // modal colors
+  &.default {
+    #{$modal} {
+      &__header {
+        &__icon {
+          background: var(--blue-100);
+
+          svg path {
+            fill: var(--blue-600);
+          }
+        }
+      }
+    }
+  }
+
+  &.danger {
+    #{$modal} {
+      &__header {
+        &__icon {
+          background: var(--red-100);
+
+          svg path {
+            fill: var(--red-500);
+          }
+        }
+      }
+    }
+  }
+
+  &.warning {
+    #{$modal} {
+      &__header {
+        &__icon {
+          background: var(--orange-100);
+
+          svg path {
+            fill: var(--orange-500);
+          }
+        }
+      }
+    }
+  }
+
+  &.success {
+    #{$modal} {
+      &__header {
+        &__icon {
+          background: var(--green-100);
+
+          svg path {
+            fill: var(--green-600);
+          }
+        }
+      }
+    }
+  }
+}
+
+.fade {
+  animation: modalFadeAnimation 250ms ease-out 150ms forwards;
+}
+
+.scale {
+  animation: modalScaleAnimation 250ms ease-out 150ms forwards;
+}
+
+.translate {
+  animation: modalTranslateAnimation 250ms ease-out 150ms forwards;
+}
+
+@keyframes modalFadeAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalScaleAnimation {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modalTranslateAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

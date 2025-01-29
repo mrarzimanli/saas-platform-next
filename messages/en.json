@@ -1,0 +1,191 @@
+{
+  "errors": {
+    "404": {
+      "title": "404",
+      "description": "Unfortunately, the page you were looking for was not found!"
+    },
+    "ui": {
+      "title": "Ooops!",
+      "description": "An error occurred. Please refresh the page."
+    }
+  },
+
+  "buttons": {
+    "login": "Login",
+    "signUp": "Sign Up",
+    "logout": "Logout",
+    "clickToLogout": "Click to logout",
+    "goBack": "Go Back",
+    "goToDashboard": "Go to Dashboard",
+    "okay": "Okay",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No",
+    "upgrade": "Upgrade",
+    "cancel": "Cancel",
+    "seeMore": "See More"
+  },
+
+  "menu": {
+    "dashboard": {
+      "title": "Dashboard",
+      "desc": "Lorem ipsum"
+    },
+    "analytics": {
+      "title": "Analytics",
+      "desc": "Lorem ipsum"
+    },
+    "settings": {
+      "title": "Settings",
+      "desc": "Lorem ipsum"
+    }
+  },
+
+  "login": {
+    "form": {
+      "title": "Login",
+      "desc": "Enter your email and password to log in."
+    }
+  },
+
+  "signUp": {
+    "form": {
+      "title": "Sign Up",
+      "desc": "Fill out the fields below to register."
+    }
+  },
+
+  "inputs": {
+    "email": {
+      "label": "Email",
+      "placeholder": "example@company.com",
+      "error": "This field cannot be empty!"
+    },
+    "username": {
+      "label": "Username",
+      "placeholder": "Enter",
+      "error": "This field cannot be empty!"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter your password",
+      "error": "This field cannot be empty!",
+      "matchError": "Passwords do not match!"
+    },
+    "passwordConfirm": {
+      "label": "Confirm Password",
+      "placeholder": "Re-enter your password",
+      "error": "This field cannot be empty!",
+      "matchError": "Passwords do not match!"
+    },
+    "plan": {
+      "label": "Plan",
+      "placeholder": "Select a plan",
+      "error": "This field cannot be empty!"
+    },
+    "timezone": {
+      "label": "Timezone",
+      "placeholder": "Select a timezone",
+      "error": "This field cannot be empty!"
+    },
+    "timeFormat": {
+      "label": "Time Format",
+      "placeholder": "Select a time format",
+      "error": "This field cannot be empty!"
+    },
+    "firstDayOfWeek": {
+      "label": "First day of the week",
+      "placeholder": "Select the first day of the week",
+      "error": "This field cannot be empty!"
+    }
+  },
+
+  "emptyStates": {},
+
+  "modals": {
+    "createUser": {
+      "title": "Create a New User.",
+      "description": "Fill out the fields below to create a new user."
+    },
+    "userNotFound": {
+      "title": "An error occurred!",
+      "description": "User not found."
+    },
+    "unexpectedError": {
+      "title": "An error occurred!",
+      "description": "Please try again."
+    },
+    "badRequest": {
+      "title": "Bad Request!",
+      "description": "Missing or invalid inputs. Please check your form."
+    },
+    "unauthorized": {
+      "title": "Unauthorized!",
+      "description": "Invalid inputs. Please try again."
+    },
+    "upgradePlan": {
+      "title": "Attention!",
+      "description": "Please upgrade your plan."
+    },
+    "cancelPlan": {
+      "title": "Attention!",
+      "description": "Are you sure you want to cancel your plan?"
+    },
+    "logout": {
+      "title": "Attention!",
+      "description": "Are you sure you want to log out?"
+    }
+  },
+
+  "dashboard": {
+    "title": "Welcome to SaaS Platform"
+  },
+
+  "settings": {
+    "accountInfo": {
+      "title": "Account Information",
+      "description": "Update your account information here"
+    },
+    "billingInfo": {
+      "title": "Billing Details",
+      "description": "Current plan, Next invoice amount, Next billing date, Payment method"
+    }
+  },
+
+  "routes": {
+    "DASHBOARD": "Dashboard",
+    "ANALYTICS": "Analytics",
+    "SETTINGS": "Settings"
+  },
+
+  "widgets": {
+    "pagePerformance": {
+      "title": "Page Performance",
+      "description": "See how your page performed over the displayed period"
+    },
+    "audienceByGender": {
+      "title": "Audience by Gender",
+      "description": ""
+    },
+    "audienceByAge": {
+      "title": "Audience by Age",
+      "description": ""
+    },
+    "posts": {
+      "title": "Posts",
+      "description": "See how your posts performed over the last 6 months (2 years)."
+    },
+    "reels": {
+      "title": "Reels",
+      "description": "See how your reels performed over the last 6 months (2 years)."
+    },
+    "topCountries": {
+      "title": "Top Countries",
+      "description": ""
+    },
+    "topCities": {
+      "title": "Top Cities",
+      "description": ""
+    }
+  }
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "email": "bubududu@gmail.com",
+    "username": "Bubu Dudu",
+    "password": "$2b$10$Zp4h4evUUdhDI6fJ4m9SWO/B563MMBmDUof9uUD8BquNVw16WENXG",
+    "plan": "pro"
+  },
+  {
+    "id": "2",
+    "email": "fada.arzimanli@gmail.com",
+    "username": "Fada Arzimanli",
+    "password": "$2b$10$iQj.9q8RCFmKeD3Zv7pTb.cSYDQKFgdxPvTFcb9K041OHM/.dHN5C",
+    "plan": "basic"
+  }
+]

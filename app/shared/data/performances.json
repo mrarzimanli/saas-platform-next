@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "name": "Posts",
+    "value": 171,
+    "difference": { "amount": 28, "unit": "" }
+  },
+  {
+    "id": "2",
+    "name": "Followers",
+    "value": 197,
+    "difference": { "amount": -15, "unit": "" }
+  },
+  {
+    "id": "3",
+    "name": "Following",
+    "value": 128,
+    "difference": { "amount": 8, "unit": "" }
+  },
+  {
+    "id": "4",
+    "name": "Engagement rate",
+    "value": 34.4,
+    "difference": { "amount": 2.1, "unit": "%" }
+  },
+  {
+    "id": "5",
+    "name": "Engagement",
+    "value": 125,
+    "difference": { "amount": -14, "unit": "" }
+  },
+  {
+    "id": "6",
+    "name": "Profile reach",
+    "value": 286400,
+    "difference": { "amount": 10500, "unit": "" }
+  },
+  {
+    "id": "7",
+    "name": "Profile impressions",
+    "value": 380100,
+    "difference": { "amount": -12700, "unit": "" }
+  },
+  {
+    "id": "8",
+    "name": "Profile views",
+    "value": 333,
+    "difference": { "amount": 45, "unit": "" }
+  }
+]

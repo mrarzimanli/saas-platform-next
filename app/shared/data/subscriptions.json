@@ -1,0 +1,12 @@
+[
+  {
+    "userId": "1",
+    "planId": "enterprise",
+    "status": "active"
+  },
+  {
+    "userId": "2",
+    "planId": "basic",
+    "status": "active"
+  }
+]

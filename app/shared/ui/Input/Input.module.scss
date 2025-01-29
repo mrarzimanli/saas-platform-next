@@ -1,0 +1,270 @@
+.form {
+  $form: &;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+  }
+
+  &__control {
+    display: flex;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    font-size: var(--fs-b3);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-b3);
+    min-width: 0;
+    transition: all 250ms ease-in-out;
+
+    input,
+    textarea {
+      border: none;
+      outline: none;
+      width: 100%;
+      background: transparent;
+      resize: none;
+      resize: none;
+      border-radius: 12px;
+
+      &:read-only::placeholder {
+        color: var(--sky-blue-50) !important;
+      }
+    }
+
+    &__icon {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: text;
+      user-select: none;
+
+      &.suffix {
+        right: 24px;
+      }
+
+      &.prefix {
+        left: 24px;
+      }
+
+      > svg,
+      > img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+
+      > svg path {
+        stroke: var(--black-13);
+      }
+    }
+
+    &__text {
+      position: absolute;
+      top: 100%;
+      font-size: var(--fs-b5);
+      line-height: var(--lh-b5);
+      color: var(--red-600);
+      margin-top: 6px;
+    }
+
+    // Modifiers
+    &.danger {
+      border-color: var(--red-600);
+    }
+
+    &.readonly {
+      border-color: var(--black-4) !important;
+
+      input,
+      textarea {
+        background-color: var(--base-2);
+      }
+    }
+
+    &.disabled {
+      cursor: default;
+      opacity: 0.5;
+      background: var(--black-3);
+      font-weight: var(--fw-bold);
+
+      &::placeholder {
+        color: var(--black-7);
+      }
+
+      span {
+        cursor: default;
+      }
+    }
+
+    &.primary {
+      border-color: var(--black-4);
+      color: var(--black-13);
+      background: var(--black-2);
+
+      input,
+      textarea {
+        &::placeholder {
+          color: var(--black-7);
+        }
+      }
+
+      &:focus-within:not(.readonly) {
+        border-color: var(--blue-600);
+      }
+    }
+
+    &.secondary {
+      color: var(--black-13);
+      background: var(--black-3);
+      border-color: var(--black-5);
+
+      input,
+      textarea {
+        &::placeholder {
+          color: var(--black-8);
+        }
+      }
+
+      &:focus-within {
+        border-color: var(--blue-600);
+      }
+    }
+
+    // Sizes
+    &.sm {
+      height: 48px;
+
+      input,
+      textarea {
+        padding: 12px 18px;
+      }
+
+      &.hasPrefix {
+        input,
+        textarea {
+          padding-left: 52px;
+        }
+      }
+
+      &.hasSuffix {
+        input,
+        textarea {
+          padding-right: 52px;
+        }
+      }
+
+      .form__control {
+        &__icon {
+          top: 12px;
+
+          &.suffix {
+            right: 18px;
+          }
+
+          &.prefix {
+            left: 18px;
+          }
+        }
+      }
+    }
+
+    &.md {
+      height: 56px;
+
+      input,
+      textarea {
+        padding: 16px 24px;
+      }
+
+      &.hasPrefix {
+        input,
+        textarea {
+          padding-left: 58px;
+        }
+      }
+
+      &.hasSuffix {
+        input,
+        textarea {
+          padding-right: 58px;
+        }
+      }
+
+      .form__control {
+        &__icon {
+          top: 16px;
+
+          &.suffix {
+            right: 24px;
+          }
+
+          &.prefix {
+            left: 24px;
+          }
+        }
+      }
+    }
+
+    &.hidden {
+      display: none;
+    }
+
+    &.textarea {
+      height: 124px;
+    }
+  }
+
+  &__label {
+    font-size: var(--fs-b4);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-b4);
+    color: var(--black-13);
+  }
+}
+
+.inputGroup {
+  .form__control {
+    border: none;
+  }
+
+  &.hasPrefix {
+    .form {
+      &__control {
+        &.hasPrefix {
+          input,
+          textarea {
+            padding-left: 44px;
+          }
+        }
+
+        &__icon {
+          &.prefix {
+            left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &.hasSuffix {
+    .form {
+      &__control {
+        &__icon {
+          &.suffix {
+            right: 10px;
+          }
+        }
+        &.hasSuffix {
+          input,
+          textarea {
+            padding-right: 44px;
+          }
+        }
+      }
+    }
+  }
+}

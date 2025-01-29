@@ -1,0 +1,14 @@
+export const register = "auth/register";
+export const login = "auth/login";
+export const logout = "auth/logout";
+export const me = "auth/me";
+export const plans = "plans/list";
+export const subscribe = "plans/subscribe";
+export const cancelSubscription = "plans/cancel";
+export const analyticsPosts = "analytics/posts";
+export const analyticsReels = "analytics/reels";
+export const analyticsPerformances = "analytics/performances";
+export const audienceByGender = "analytics/audienceByGender";
+export const audienceByAge = "analytics/audienceByAge";
+export const audienceByCountries = "analytics/audienceByCountries";
+export const audienceByCities = "analytics/audienceByCities";

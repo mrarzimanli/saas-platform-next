@@ -1,0 +1,67 @@
+.inputGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__label {
+    font-size: var(--fs-b4);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-b4);
+    color: var(--black-13);
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--black-6);
+    border-radius: 12px;
+    font-size: var(--fs-b3);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-b3);
+    color: var(--black-13);
+    background: var(--black-2);
+    flex-grow: 1;
+    min-width: 0;
+    transition: all 250ms ease-in-out;
+
+    &:focus-within {
+      border-color: var(--blue-600);
+    }
+
+    .prefix {
+      display: flex;
+      align-self: stretch;
+      // padding: 16px 0 16px 24px;
+      padding-left: 15px;
+    }
+
+    .suffix {
+      display: flex;
+      align-self: stretch;
+      // padding: 16px 24px 16px 0;
+      padding-right: 24px;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 100%;
+    font-size: var(--fs-b4);
+    line-height: var(--lh-b4);
+    color: var(--red-600);
+    margin-top: 8px;
+  }
+
+  &.hasPrefix {
+    input {
+      padding-left: 10px;
+    }
+  }
+
+  &.hasSuffix {
+    input {
+      padding-right: 10px;
+    }
+  }
+}
