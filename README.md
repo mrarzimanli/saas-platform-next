@@ -36,16 +36,16 @@ Nəticəni görmək üçün brauzerdə [http://localhost:3000](http://localhost:
 - Ehtiyac olan API-ləri təmin edə bilmək üçün `next.js` istifadə edilib və hər hansı 3-cü tərəf provider istifadə etmədən bütün API-lər manual olaraq yazılıb.
 
 - `JWT` istifadə edərək **Secure Authentication** təmin edildi. (`authToken`, `refreshToken`)
-- **Global state management** üçün `ContextAPI`, **data fetching** üçün `react-query`, **API client** olaraq `axios` istifadə edildi.
+- **Global state management** üçün `ContextAPI`, **data fetching** üçün `react-query`, **API client** olaraq `axios` istifadə edilib.
 
-- Routing dəyişikliyi olmadab **internationalization** üçün `next-intl (i18n)` istifadə edildi. (`en`, `az`)
+- Routing dəyişikliyi olmadan **internationalization** üçün `next-intl (i18n)` istifadə edilib. (`en`, `az`)
 
 - `middleware` vasitəsi ilə **Protected Routing** və **Plan-Based Access Control** təmin edilib.
 
 - **Code efficiency** artırmaq üçün `TypeScript` istifadə olunub.
 
-- Dizayn bacarıqlarını önə çıxarmaq üçün hər hansı Design System və ya kitabxanası istifadə olunmayıb. Dizayn `BEM` metodologiyası və `Module SCSS` istifadə edilərək sıfırdan hazırlanıb.
-- Analitika məlumatlarının göstərilməsi üçün `Apache eCharts` istifadə olunub.
+- Dizayn bacarıqlarını önə çıxarmaq üçün hər hansı Design System və ya kitabxana istifadə olunmayıb. Dizayn `BEM` metodologiyası və `Module SCSS` istifadə edilərək sıfırdan hazırlanıb.
+- Analitik məlumatlarının göstərilməsi üçün `Apache eCharts` istifadə olunub.
 
 - **Data Fetching** zamanı axıcı görüntünün əldə olunması üçün `React Loading Skeleton` istifadə olunub.
 
